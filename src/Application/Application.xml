@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Application</name>
+    </assembly>
+    <members>
+        <member name="T:Application.Features.Currencies.Queries.GetCurrenciesDictionary.GetCurrenciesDictionaryQuery">
+            <summary>
+            Hi hello
+            </summary>
+        </member>
+        <member name="P:Application.Features.Currencies.Queries.GetCurrenciesDictionary.GetCurrenciesDictionaryQuery.Search">
+            <summary>
+            Фраза для поиска по имени и iso code
+            </summary>
+        </member>
+    </members>
+</doc>

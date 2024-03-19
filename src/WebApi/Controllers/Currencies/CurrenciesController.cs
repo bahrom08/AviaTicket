@@ -8,13 +8,17 @@ namespace WebApi.Controllers.Currencies;
 public class CurrenciesController : ApiBaseController
 {
 
+    /// <summary>
+    /// HI
+    /// </summary>
+    /// <param name="request"></param>
+    /// <returns></returns>
     [HttpGet("dictionary")]
     [SwaggerOperation(
         Summary = "Список валют",
-        Description = "API возвращает список валют",
-        Tags = new[] { "Валюта", "Currency" }
+        Description = "API возвращает список валют"
     )]
-    public async Task<IActionResult> GetDictionary([FromQuery] GetCurrenciesDictionaryQuery request)
+    public async Task<IActionResult> GetDictionary([FromQuery][SwaggerSchema(Required = new[] { "Description" })] GetCurrenciesDictionaryQuery request)
     {
         var data = await Mediator.Send(request);
 

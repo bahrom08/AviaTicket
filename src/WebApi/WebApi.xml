@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="P:WebApi.Common.Responses.BaseResponse`1.Status">
+            <summary>
+            Статус успешного выполнения запроса true/false
+            </summary>
+        </member>
+        <member name="P:WebApi.Common.Responses.BaseResponse`1.ErrorCode">
+            <summary>
+            Код ошибки в случае status = false
+            </summary>
+        </member>
+        <member name="P:WebApi.Common.Responses.BaseResponse`1.Message">
+            <summary>
+            Сообщение об результате запроса
+            </summary>
+        </member>
+        <member name="P:WebApi.Common.Responses.BaseResponse`1.Errors">
+            <summary>
+            Список ошибок
+            </summary>
+        </member>
+        <member name="P:WebApi.Common.Responses.BaseResponse`1.Data">
+            <summary>
+            Результаты ответа запроса
+            </summary>
+        </member>
+        <member name="P:WebApi.Common.Responses.BaseResponse`1.Meta">
+            <summary>
+            Данные для дополнительных (пагинация, токены и т.д.)
+            </summary>
+        </member>
+        <member name="P:WebApi.Common.Responses.Meta.TemporaryToken">
+            <summary>
+            Временый токен
+            </summary>
+        </member>
+        <member name="P:WebApi.Common.Responses.Meta.AccessToken">
+            <summary>
+            Токен доступа 
+            </summary>
+        </member>
+        <member name="P:WebApi.Common.Responses.Meta.RefreshToken">
+            <summary>
+            Токен для обновления токена доступа
+            </summary>
+        </member>
+        <member name="P:WebApi.Common.Responses.Meta.Pagination">
+            <summary>
+            Параметры пагинации
+            </summary>
+        </member>
+        <member name="P:WebApi.Common.Responses.Meta.FileUrl">
+            <summary>
+            Хост для получения файлов
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.Currencies.CurrenciesController.GetDictionary(Application.Features.Currencies.Queries.GetCurrenciesDictionary.GetCurrenciesDictionaryQuery)">
+            <summary>
+            HI
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

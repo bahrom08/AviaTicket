@@ -3,6 +3,7 @@ using Microsoft.OpenApi.Models;
 using WebApi.Common.Configurations;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using System.Xml;
 
 namespace WebApi.Common.Extensions;
 
@@ -34,6 +35,8 @@ public static class SwaggerExtension
             options.SubstituteApiVersionInUrl = true;
         });
 
+        MergeDocumentationFiles();
+
         services.AddSwaggerGen(options =>
         {
             var provider = services.BuildServiceProvider().GetRequiredService<IApiVersionDescriptionProvider>();
@@ -49,6 +52,8 @@ public static class SwaggerExtension
                     }
                 );
             }
+            
+            options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "WebApi.xml"));
 
             options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
             {
@@ -72,7 +77,6 @@ public static class SwaggerExtension
                     new string[] { }
                 }
             });
-            options.EnableAnnotations();
         });
 
         services.AddApiVersioning(options =>
@@ -94,7 +98,7 @@ public static class SwaggerExtension
         {
             options.DocExpansion(DocExpansion.None);
             options.EnableDeepLinking();
-            options.DisplayOperationId();
+            
             options.RoutePrefix = "swagger";
 
             foreach (var description in provider.ApiVersionDescriptions)
@@ -104,6 +108,39 @@ public static class SwaggerExtension
                     "AviaTiket API v" + description.ApiVersion.ToString());
             }
         });
+    }
+
+    private static void MergeDocumentationFiles()
+    {
+        var directory = AppDomain.CurrentDomain.BaseDirectory;
+
+        var files = Directory.GetFiles(directory, "*.xml").ToList();
+
+        var mainFile = files.Where(u => u.Contains("WebApi.xml")).FirstOrDefault();
+        if (string.IsNullOrEmpty(mainFile))
+            return;
+        files.Remove(mainFile);
+
+        if (files.Count == 0)
+            return;
+        var mainDoc = new XmlDocument();
+        mainDoc.Load(mainFile);
+        var membersNode = mainDoc.SelectSingleNode("//members");
+        files.ForEach(file => {
+            var doc = new XmlDocument();
+            doc.Load(file);
+            var nodes = doc.SelectNodes("//member");
+            foreach (XmlNode node in nodes)
+            {
+                var importNode = mainDoc.ImportNode(node, true);
+                membersNode.AppendChild(importNode);
+            }
+        });
+        files.ForEach(u =>
+        {
+            File.Delete(u);
+        });
+        mainDoc.Save(mainFile);
     }
 
 }
