@@ -4,7 +4,7 @@ namespace WebApi.Controllers.Routes;
 
 public class RoutesController : ApiBaseController
 {
-    [HttpGet]
+    [HttpPost("search")]
     public async Task<IActionResult> Search()
     {
         return Ok();

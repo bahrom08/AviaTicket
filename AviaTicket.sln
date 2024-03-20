@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "src\WebApi\WebApi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Kiwi", "src\Infrastructure.Kiwi\Infrastructure.Kiwi.csproj", "{5978D8AF-95B4-4360-8499-0038A1B34300}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Skyscanner", "src\Infrastructure.Skyscanner\Infrastructure.Skyscanner.csproj", "{EAD8810A-EAF7-4BA8-BC6F-556D9BF15AE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.GoogleFlights", "src\Infrastructure.GoogleFlights\Infrastructure.GoogleFlights.csproj", "{808DFEE6-0660-4CF4-9D10-49F08CECBFB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +53,10 @@ Global
 		{5978D8AF-95B4-4360-8499-0038A1B34300}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5978D8AF-95B4-4360-8499-0038A1B34300}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5978D8AF-95B4-4360-8499-0038A1B34300}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EAD8810A-EAF7-4BA8-BC6F-556D9BF15AE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EAD8810A-EAF7-4BA8-BC6F-556D9BF15AE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EAD8810A-EAF7-4BA8-BC6F-556D9BF15AE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EAD8810A-EAF7-4BA8-BC6F-556D9BF15AE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{808DFEE6-0660-4CF4-9D10-49F08CECBFB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{808DFEE6-0660-4CF4-9D10-49F08CECBFB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{808DFEE6-0660-4CF4-9D10-49F08CECBFB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{808DFEE6-0660-4CF4-9D10-49F08CECBFB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,7 +71,7 @@ Global
 		{3F175D72-990D-43F9-9B8D-B8D0CBBE663A} = {5AC351DF-993D-4C1D-975F-801C0CE266F3}
 		{0B4ED74F-68B6-4065-A454-A18F5DB2A388} = {B4B1DB25-49EF-46B7-BF13-F31F7F239EB6}
 		{5978D8AF-95B4-4360-8499-0038A1B34300} = {5AC351DF-993D-4C1D-975F-801C0CE266F3}
-		{EAD8810A-EAF7-4BA8-BC6F-556D9BF15AE8} = {5AC351DF-993D-4C1D-975F-801C0CE266F3}
+		{808DFEE6-0660-4CF4-9D10-49F08CECBFB3} = {5AC351DF-993D-4C1D-975F-801C0CE266F3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6C957B3B-B78C-4188-812E-B0FA70E93BBF}

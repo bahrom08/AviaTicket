@@ -15,12 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Common\Configurations\" />
-    <Folder Include="Common\Contracts\Responses\" />
-    <Folder Include="Common\Contracts\Requests\" />
-    <Folder Include="Common\Enums\" />
-    <Folder Include="Common\NewFolder\" />
-    <Folder Include="Contracts\Requests\" />
+    <Folder Include="Common\" />
   </ItemGroup>
 
   <ItemGroup>
