@@ -29,14 +29,79 @@
             По авиакомпании
             </summary>
         </member>
-        <member name="T:Application.Features.Currencies.Queries.GetCurrenciesDictionary.GetCurrenciesDictionaryQuery">
+        <member name="P:Application.Features.Coutries.Queries.GetCoutriesDictionary.GetCoutriesDictionaryQuery.Search">
             <summary>
-            Hi hello
+            Параметр поиска по содержанию имени и кода страны
             </summary>
         </member>
         <member name="P:Application.Features.Currencies.Queries.GetCurrenciesDictionary.GetCurrenciesDictionaryQuery.Search">
             <summary>
             Фраза для поиска по имени и iso code
+            </summary>
+        </member>
+        <member name="P:Application.Features.Orders.Commands.CreateOrder.CreateOrderCommand.OfferId">
+            <summary>
+            Id предложения
+            </summary>
+        </member>
+        <member name="P:Application.Features.Orders.Commands.CreateOrder.CreateOrderCommand.GatewayProviderId">
+            <summary>
+            Источник предложения
+            </summary>
+        </member>
+        <member name="P:Application.Features.Orders.Commands.CreateOrder.CreateOrderCommand.Passengers">
+            <summary>
+            Пассажиры
+            </summary>
+        </member>
+        <member name="P:Application.Features.Orders.Commands.CreateOrder.PassengerDto.FirstName">
+            <summary>
+            Имя
+            </summary>
+        </member>
+        <member name="P:Application.Features.Orders.Commands.CreateOrder.PassengerDto.LastName">
+            <summary>
+            Фамилия
+            </summary>
+        </member>
+        <member name="P:Application.Features.Orders.Commands.CreateOrder.PassengerDto.MiddleName">
+            <summary>
+            Отчество
+            </summary>
+        </member>
+        <member name="P:Application.Features.Orders.Commands.CreateOrder.PassengerDto.DateOfBirth">
+            <summary>
+            Дата рождения
+            </summary>
+        </member>
+        <member name="P:Application.Features.Orders.Commands.CreateOrder.PassengerDto.Gender">
+            <summary>
+            Пол
+            </summary>
+        </member>
+        <member name="P:Application.Features.Orders.Commands.CreateOrder.PassengerDto.CitizenshipId">
+            <summary>
+            Id гражданства
+            </summary>
+        </member>
+        <member name="P:Application.Features.Orders.Commands.CreateOrder.PassengerDto.DocumentType">
+            <summary>
+            Тип документа
+            </summary>
+        </member>
+        <member name="P:Application.Features.Orders.Commands.CreateOrder.PassengerDto.DocumentNumber">
+            <summary>
+            Серийный номер документа
+            </summary>
+        </member>
+        <member name="P:Application.Features.Orders.Commands.CreateOrder.PassengerDto.IssueAt">
+            <summary>
+            Дата выдачи документа
+            </summary>
+        </member>
+        <member name="P:Application.Features.Orders.Commands.CreateOrder.PassengerDto.ExpiredAt">
+            <summary>
+            Срок истечение документа
             </summary>
         </member>
         <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.GetRoutesSearchQuery.ClassTypeCode">

@@ -61,9 +61,23 @@
         </member>
         <member name="M:WebApi.Controllers.Currencies.CurrenciesController.GetDictionary(Application.Features.Currencies.Queries.GetCurrenciesDictionary.GetCurrenciesDictionaryQuery)">
             <summary>
-            HI
+            API возвращает список валют
             </summary>
-            <param name="request"></param>
+            <param name="request">Параметры запроса</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.Orders.OrdersController.Create(Application.Features.Orders.Commands.CreateOrder.CreateOrderCommand)">
+            <summary>
+            Создание заказа
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.Regions.CountriesController.GetDictionary(Application.Features.Coutries.Queries.GetCoutriesDictionary.GetCoutriesDictionaryQuery)">
+            <summary>
+            API для списка стран и гражданств
+            </summary>
+            <param name="request">Параметры запроса</param>
             <returns></returns>
         </member>
         <member name="M:WebApi.Controllers.Routes.RoutesController.Search(Application.Features.Routes.Queries.GetRoutesSearch.GetRoutesSearchQuery)">
