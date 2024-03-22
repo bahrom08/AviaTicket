@@ -11,22 +11,13 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
         builder.Property(x => x.OfferId)
             .IsRequired();
 
-        builder.HasIndex(x => x.OfferId)
-            .IsUnique();
-
-        builder.Property(x => x.ExtId)
-            .IsRequired();
-
-        builder.HasIndex(x => x.ExtId)
-            .IsUnique();
-
         builder.Property(x => x.Price)
             .HasColumnType("decimal(20,2)")
             .IsRequired();
 
         builder.Property(x => x.BaggagePrice)
             .HasColumnType("decimal(20,2)")
-            .IsRequired();
+            .IsRequired(false);
 
         builder.Property(x => x.CurrencyId)
             .IsRequired();

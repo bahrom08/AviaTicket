@@ -4,6 +4,31 @@
         <name>Application</name>
     </assembly>
     <members>
+        <member name="T:Application.Common.Enums.RoteSortEnum">
+            <summary>
+            Список возможных параметров для фильтрации, доступные значения "DepartureDate" - 0, "Price" - 1, "StopsCount" - 2, "Airline" - 3
+            </summary>
+        </member>
+        <member name="F:Application.Common.Enums.RoteSortEnum.DepartureDate">
+            <summary>
+            По дате
+            </summary>
+        </member>
+        <member name="F:Application.Common.Enums.RoteSortEnum.Price">
+            <summary>
+            По цене
+            </summary>
+        </member>
+        <member name="F:Application.Common.Enums.RoteSortEnum.StopsCount">
+            <summary>
+            По количеству пересадок
+            </summary>
+        </member>
+        <member name="F:Application.Common.Enums.RoteSortEnum.Airline">
+            <summary>
+            По авиакомпании
+            </summary>
+        </member>
         <member name="T:Application.Features.Currencies.Queries.GetCurrenciesDictionary.GetCurrenciesDictionaryQuery">
             <summary>
             Hi hello
@@ -12,6 +37,106 @@
         <member name="P:Application.Features.Currencies.Queries.GetCurrenciesDictionary.GetCurrenciesDictionaryQuery.Search">
             <summary>
             Фраза для поиска по имени и iso code
+            </summary>
+        </member>
+        <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.GetRoutesSearchQuery.ClassTypeCode">
+            <summary>
+            Класс обслуживания
+            </summary>
+        </member>
+        <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.GetRoutesSearchQuery.CurrencyIsoCode">
+            <summary>
+            Валюта
+            </summary>
+        </member>
+        <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.GetRoutesSearchQuery.Flight">
+            <summary>
+            Маршрут
+            </summary>
+        </member>
+        <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.GetRoutesSearchQuery.ReturnFlight">
+            <summary>
+            Обратный маршрут
+            </summary>
+        </member>
+        <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.GetRoutesSearchQuery.Passengers">
+            <summary>
+            Пассажиры
+            </summary>
+        </member>
+        <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.GetRoutesSearchQuery.Filters">
+            <summary>
+            Параметры фильтрации
+            </summary>
+        </member>
+        <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.GetRoutesSearchQuery.Sort">
+            <summary>
+            Параметры сортировки
+            </summary>
+        </member>
+        <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.FlightDto.From">
+            <summary>
+            Город отбытия
+            </summary>
+        </member>
+        <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.FlightDto.To">
+            <summary>
+            Город прибытия
+            </summary>
+        </member>
+        <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.FlightDto.DepartureDate">
+            <summary>
+            Дата отбытия
+            </summary>
+        </member>
+        <member name="T:Application.Features.Routes.Queries.GetRoutesSearch.PassengersDto">
+            <summary>
+            Объект пассажиров маршрута
+            </summary>
+        </member>
+        <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.PassengersDto.Count">
+            <summary>
+            Количество пассажиров
+            </summary>
+        </member>
+        <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.PassengersDto.Type">
+            <summary>
+            Тип пассжира, доступные значения ADULT, CHILD, INFANT
+            </summary>
+        </member>
+        <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.SortDto.Property">
+            <summary>
+            Свойство для сортировки, доступные значения "DepartureDate" - 0, "Price" - 1, "StopsCount" - 2, "Airline" - 3
+            </summary>
+        </member>
+        <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.SortDto.Desc">
+            <summary>
+            Если значение true cортировка будет по убиванию
+            </summary>
+        </member>
+        <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.FilterDto.FromPrice">
+            <summary>
+            Цена от
+            </summary>
+        </member>
+        <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.FilterDto.ToPrice">
+            <summary>
+            Цена до
+            </summary>
+        </member>
+        <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.FilterDto.StopsCount">
+            <summary>
+            Количество пересадок
+            </summary>
+        </member>
+        <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.FilterDto.AirlineCode">
+            <summary>
+            Код авиакомпании
+            </summary>
+        </member>
+        <member name="P:Application.Features.Routes.Queries.GetRoutesSearch.FilterDto.AirlineName">
+            <summary>
+            Название авиакомпании
             </summary>
         </member>
     </members>

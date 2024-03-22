@@ -66,5 +66,12 @@
             <param name="request"></param>
             <returns></returns>
         </member>
+        <member name="M:WebApi.Controllers.Routes.RoutesController.Search(Application.Features.Routes.Queries.GetRoutesSearch.GetRoutesSearchQuery)">
+            <summary>
+            API для поиска маршрутов
+            </summary>
+            <param name="request">Параметры запроса</param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

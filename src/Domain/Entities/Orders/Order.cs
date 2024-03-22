@@ -3,12 +3,11 @@ using Domain.Entities.Currencies;
 
 namespace Domain.Entities.Orders;
 
-public class Order : AuditableBaseEntity
+public class Order : BaseEntity
 {
     public string OfferId { get; set; }
-    public string ExtId { get; set; }
     public decimal Price { get; set; }
-    public decimal BaggagePrice { get; set; }
+    public decimal? BaggagePrice { get; set; }
     public Guid CurrencyId { get; set; }
     public Currency Currency { get; set; }
     public decimal CurrencyRate { get; set; }

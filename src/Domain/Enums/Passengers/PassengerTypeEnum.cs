@@ -1,6 +1,6 @@
 ﻿using Domain.Common;
 
-namespace Domain.Entities.Passengers;
+namespace Domain.Enums.Passengers;
 
 public class PassengerTypeEnum : BaseEnum<PassengerTypeEnum, string>
 {

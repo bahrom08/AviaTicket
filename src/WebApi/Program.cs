@@ -20,6 +20,8 @@ builder.Services.AddSwaggerConfiguration(builder.Configuration);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddMemoryCache();
+
 
 var app = builder.Build();
 

@@ -4,14 +4,20 @@ public class GetRoutesSearchViewModel
 {
     public string OfferId { get; set; }
     public List<string> OfferItemIds { get; set; }
-    public DateTime TimeLimit { get; set; }
+    public Guid GatewayProviderId { get; set; }
+    public DateTime ExpiredAt { get; set; }
     public decimal Price { get; set; }
     public string CurrencyIsoCode { get; set; }
     public List<RouteDto> Routes { get; set; }
+    public bool CanRefund { get; set; }
+    public bool CanChange { get; set; }
+    public string ClassTypeCode { get; set; }
 }
 
 public class RouteDto
 {
+    public AirportDto ArrivalAirport { get; set; }
+    public AirportDto DepartureAirport { get; set; }
     public int DurationInSeconds { get; set; }
     public List<Segment> Segments { get; set; }
 }
@@ -23,10 +29,7 @@ public class Segment
     public string AirlineCode { get; set; }
     public string Aircraft { get; set; }
     public int DurationInSeconds { get; set; }
-    public int DistanceInKm { get; set; }
-    public bool CanRefund { get; set; }
-    public bool CanChange { get; set; }
-    public string ClassTypeCode { get; set; }
+    public double DistanceInKm { get; set; }
     public List<BaggageDto> Baggages { get; set; }
     public AirportDto ArrivalAirport { get; set; }
     public AirportDto DepartureAirport { get; set; }

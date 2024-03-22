@@ -1,6 +1,6 @@
 ﻿using Application.Common.Interfaces;
-using Domain.Entities.Passengers;
 using Domain.Enums.ClassTypes;
+using Domain.Enums.Passengers;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,13 +19,13 @@ public class GetRoutesSearchQueryValidator : AbstractValidator<GetRoutesSearchQu
             .NotEmpty()
             .WithMessage("Укажите класс обслуживания")
             .Must(x => ClassTypeEnum.List.Select(x => x.Value).Contains(x))
-            .WithMessage("Указано неверный класс облуживания");
+            .WithMessage("Указан неверный класс облуживания");
 
         RuleFor(x => x.CurrencyIsoCode)
             .NotEmpty()
             .WithMessage("Укажите валюту")
             .MustAsync(CheckCurrencyExist)
-            .WithMessage("Указано неверная валюта");
+            .WithMessage("Указана неверная валюта");
 
         RuleFor(x => x.Flight)
             .Cascade(CascadeMode.Stop)
@@ -64,9 +64,14 @@ public class GetRoutesSearchQueryValidator : AbstractValidator<GetRoutesSearchQu
             .WithMessage("Дата возвращения должно быть больше")
             .When(x => x.ReturnFlight != null && x.Flight != null);
 
+        RuleFor(x => x.Passengers)
+            .Cascade(CascadeMode.Stop)
+            .NotNull()
+            .WithMessage("Укажите пассижиров");
+
         RuleForEach(x => x.Passengers)
             .Cascade(CascadeMode.Stop)
-            .NotEmpty()
+            .NotNull()
             .WithMessage("Укажите пассижиров")
             .DependentRules(() =>
             {
@@ -77,7 +82,8 @@ public class GetRoutesSearchQueryValidator : AbstractValidator<GetRoutesSearchQu
                     .Must(x => x.Sum(x => x.Count) <= 9)
                     .WithMessage("Макс. 9 пассажиров")
                     .Must(x => x.Where(x => x.Type == PassengerTypeEnum.Infant.Value).Sum(x => x.Count) <= 1)
-                    .WithMessage($"Макс. кол-во младенцев 1 пассажир");
+                    .WithMessage($"Макс. кол-во младенцев 1 пассажир")
+                    .When(x => x.Passengers != null);
 
             })
             .ChildRules(ch =>
@@ -86,8 +92,9 @@ public class GetRoutesSearchQueryValidator : AbstractValidator<GetRoutesSearchQu
                     .NotEmpty()
                     .WithMessage("Укажите тип пасажиров")
                     .Must(x => PassengerTypeEnum.List.Select(x => x.Value).Contains(x))
-                    .WithMessage("Указано неверный тип пассажиров");
-            });
+                    .WithMessage("Указан неверный тип пассажиров");
+            })
+            .When(x => x.Passengers != null);
     }
 
     private static bool CheckPassengersType(List<PassengersDto> passengers)

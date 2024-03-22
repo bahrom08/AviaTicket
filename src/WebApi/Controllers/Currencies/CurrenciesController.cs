@@ -1,4 +1,5 @@
-﻿using Application.Features.Currencies.Queries.GetCurrenciesDictionary;
+﻿using Application.Features.Coutries.Queries.GetCoutriesDictionary;
+using Application.Features.Currencies.Queries.GetCurrenciesDictionary;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using WebApi.Common.Responses;
@@ -9,16 +10,13 @@ public class CurrenciesController : ApiBaseController
 {
 
     /// <summary>
-    /// HI
+    /// API возвращает список валют
     /// </summary>
-    /// <param name="request"></param>
+    /// <param name="request">Параметры запроса</param>
     /// <returns></returns>
     [HttpGet("dictionary")]
-    [SwaggerOperation(
-        Summary = "Список валют",
-        Description = "API возвращает список валют"
-    )]
-    public async Task<IActionResult> GetDictionary([FromQuery][SwaggerSchema(Required = new[] { "Description" })] GetCurrenciesDictionaryQuery request)
+    [ProducesResponseType(typeof(SuccessResponse<List<GetCurrenciesDictionaryViewModel>>), StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetDictionary([FromQuery] GetCurrenciesDictionaryQuery request)
     {
         var data = await Mediator.Send(request);
 
