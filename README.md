@@ -11,12 +11,6 @@
  - AutoMapper
  - FluentValidation
 
-
-## Kholbutaev Bahrom
-
-- [@bahrom-kholbutaev](https://www.linkedin.com/in/bahrom-kholbutaev/)
-
-
 ## Архитектура
 
 Архитектура проекта реализована в соответствии с принципами "[Чистой архитектуры - Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)".
@@ -31,8 +25,6 @@
  - **Infrastructure Layer (Инфраструктура)**: Содержит реализации интерфейсов, необходимых для взаимодействия с внешними системами.Включает в себя реализации репозиториев, адаптеры к базам данных, внешние API и другие технические компоненты.Зависит от внешних технологий и инструментов, таких как базы данных, HTTP-клиенты и т.д.
  Каждый из этих слоев имеет четкую ответственность и структуру, обеспечивая легкость в разработке, тестировании и поддержке приложения.
 
+## Kholbutaev Bahrom
 
-
-
-
-
+- [@bahrom-kholbutaev](https://www.linkedin.com/in/bahrom-kholbutaev/)
