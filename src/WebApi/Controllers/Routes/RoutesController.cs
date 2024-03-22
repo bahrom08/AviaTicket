@@ -20,6 +20,7 @@ public class RoutesController : ApiBaseController
     /// <param name="request">Параметры запроса</param>
     /// <returns></returns>
     [HttpPost("search")]
+    [ProducesResponseType(typeof(SuccessResponse<List<GetRoutesSearchViewModel>>), StatusCodes.Status200OK)]
     public async Task<IActionResult> Search([FromBody] GetRoutesSearchQuery request)
     {
         _logger.LogInformation("{className} - {method} - {message}", GetType().Name, "Search", JsonConvert.SerializeObject(request));

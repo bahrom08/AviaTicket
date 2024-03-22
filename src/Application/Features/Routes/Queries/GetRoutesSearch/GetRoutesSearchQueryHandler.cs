@@ -47,7 +47,7 @@ public class GetRoutesSearchQueryHandler : IRequestHandler<GetRoutesSearchQuery,
         result = Filtering(result, request);
         result = Sorting(result, request);
 
-        if (!string.IsNullOrEmpty(cacheKey))
+        if (!string.IsNullOrEmpty(cacheKey) && result.Count > 0)
             _cache.Set(cacheKey, result, TimeSpan.FromMinutes(15));
 
         return Task.FromResult(result);
